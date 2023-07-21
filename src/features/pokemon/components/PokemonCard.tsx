@@ -89,7 +89,7 @@ const PokemonCard = ({ pokemonItem }: PokemonCardType) => {
 			</Text>
 			<View style={styles.image}>{getPokemonImg()}</View>
 			<Text style={{ ...styles.nameText, backgroundColor: typeColor }}>
-				{titlecase(pokemon?.name.toUpperCase())}
+				{titlecase(pokemon?.name.toUpperCase() ?? "")}
 			</Text>
 		</TouchableOpacity>
 	);

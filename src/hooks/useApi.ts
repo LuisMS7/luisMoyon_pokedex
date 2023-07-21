@@ -16,6 +16,7 @@ export const useApi = <T>(
 
 	const request = async () => {
 		let response = null;
+		setError(false);
 		if (!loading) {
 			try {
 				setLoading(true);

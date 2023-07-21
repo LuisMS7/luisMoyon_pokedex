@@ -16,6 +16,7 @@ module.exports = function (api) {
 						"@hooks": "./src/hooks",
 						"@app-types": "./src/types",
 						"@navigation": "./src/navigation",
+						"@providers": "./src/providers",
 						"@pokemon": "./src/features/pokemon",
 						"@filters": "./src/features/filters",
 					},
