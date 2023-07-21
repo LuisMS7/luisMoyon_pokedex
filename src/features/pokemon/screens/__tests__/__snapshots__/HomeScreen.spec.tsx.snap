@@ -66,5 +66,11 @@ exports[`HomeScreen should render correctly 1`] = `
       </View>
     </RCTScrollView>
   </View>
+  <Modal
+    animationType="fade"
+    hardwareAccelerated={false}
+    transparent={true}
+    visible={false}
+  />
 </RCTSafeAreaView>
 `;

@@ -1,5 +1,5 @@
 import React, { useCallback, useMemo } from "react";
-import { Image, SafeAreaView, StyleSheet, View } from "react-native";
+import { Image, Platform, SafeAreaView, StyleSheet, View } from "react-native";
 import { PokemonNavigationProps } from "@pokemon/types/pokemon-navigator.type";
 import { Pokemon } from "@pokemon/types/pokemon.type";
 import SvgUri from "react-native-svg-uri";
@@ -10,11 +10,13 @@ import PokemonDetailsHeader from "@pokemon/components/PokemonDetailsHeader";
 // eslint-disable-next-line max-len
 import PokemonDetailsInfoBackground from "@pokemon/components/PokemonDetailsInfoBackground";
 import PokemonDetailsInfoCard from "@pokemon/components/PokemonDetailsInfoCard";
+import { useSafeAreaInsets } from "react-native-safe-area-context";
 
 type PokemonDetailsScreenProps = PokemonNavigationProps<"PokemonDetailsScreen">;
 
 const PokemonDetailsScreen = ({ route }: PokemonDetailsScreenProps) => {
 	const pokemon: Pokemon = route.params.pokemon;
+	const { top } = useSafeAreaInsets();
 
 	const typeColor = useMemo(() => {
 		return TypeColor[pokemon.types[0].type.name];
@@ -29,6 +31,7 @@ const PokemonDetailsScreen = ({ route }: PokemonDetailsScreenProps) => {
 				<Image
 					source={{ uri: pokemon.img }}
 					style={{ height: perfectSize(200), width: "50%" }}
+					resizeMode={"contain"}
 				/>
 			);
 		} else if (pokemon?.img && pokemon?.img.endsWith("svg")) {
@@ -43,7 +46,13 @@ const PokemonDetailsScreen = ({ route }: PokemonDetailsScreenProps) => {
 	}, [pokemon]);
 
 	return (
-		<View style={{ ...styles.container, backgroundColor: typeColor }}>
+		<View
+			style={{
+				...styles.container,
+				backgroundColor: typeColor,
+				paddingTop: Platform.OS === "android" ? top : 0,
+			}}
+		>
 			<SafeAreaView style={styles.container}>
 				<PokemonDetailsHeader pokemon={pokemon} />
 				<View style={styles.image}>{getPokemonImg()}</View>
