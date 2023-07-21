@@ -1,0 +1,52 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`PokemonCard should render correctly 1`] = `
+<View
+  style={
+    {
+      "borderColor": "#74CB48",
+      "borderRadius": 23.855932837144906,
+      "borderWidth": 5.963983209286226,
+      "flexDirection": "column",
+      "height": "40%",
+      "width": "80%",
+    }
+  }
+>
+  <Text
+    style={
+      {
+        "color": "#74CB48",
+        "fontSize": 29.819916046431132,
+        "padding": 29.819916046431132,
+        "textAlign": "right",
+        "width": "100%",
+      }
+    }
+  >
+    #
+    0001
+  </Text>
+  <View
+    style={
+      {
+        "alignItems": "center",
+        "flex": 1,
+      }
+    }
+  />
+  <Text
+    style={
+      {
+        "backgroundColor": "#74CB48",
+        "color": "white",
+        "fontSize": 35.78389925571736,
+        "paddingVertical": 29.819916046431132,
+        "textAlign": "center",
+      }
+    }
+  >
+    Bulbasaur
+  </Text>
+</View>
+`;

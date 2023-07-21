@@ -4,6 +4,13 @@
 		"jsx": "react",
 		"strict": true,
 		"baseUrl": ".",
-		"paths": {}
+		"paths": {
+			"@src/*": ["src/*"],
+			"@lib/*": ["src/lib/*"],
+			"@utils/*": ["src/utils/*"],
+			"@hooks/*": ["src/hooks/*"],
+			"@app-types/*": ["src/types/*"],
+			"@pokemon/*": ["src/features/pokemon/*"]
+		}
 	}
 }
