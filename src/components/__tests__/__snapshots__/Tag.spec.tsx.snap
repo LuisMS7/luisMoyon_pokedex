@@ -1,0 +1,98 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Tag should render correctly '{
+  text: 'tag2',
+  backgroundColor: 'red',
+  textColor: 'black',
+  borderColor: 'blue'
+}' tag 1`] = `
+<View
+  style={
+    {
+      "alignItems": "center",
+      "backgroundColor": "red",
+      "borderColor": "blue",
+      "borderRadius": 1000,
+      "borderWidth": 1,
+      "justifyContent": "center",
+      "paddingHorizontal": 10,
+      "paddingVertical": 5,
+    }
+  }
+>
+  <Text
+    style={
+      {
+        "color": "black",
+        "fontSize": 17.89194962785868,
+        "fontWeight": "800",
+      }
+    }
+  >
+    tag2
+  </Text>
+</View>
+`;
+
+exports[`Tag should render correctly '{
+  text: 'tag3',
+  backgroundColor: 'transparent',
+  textColor: 'black',
+  borderColor: 'green'
+}' tag 1`] = `
+<View
+  style={
+    {
+      "alignItems": "center",
+      "backgroundColor": "transparent",
+      "borderColor": "green",
+      "borderRadius": 1000,
+      "borderWidth": 1,
+      "justifyContent": "center",
+      "paddingHorizontal": 10,
+      "paddingVertical": 5,
+    }
+  }
+>
+  <Text
+    style={
+      {
+        "color": "black",
+        "fontSize": 17.89194962785868,
+        "fontWeight": "800",
+      }
+    }
+  >
+    tag3
+  </Text>
+</View>
+`;
+
+exports[`Tag should render correctly '{ text: 'tag1', backgroundColor: 'red' }' tag 1`] = `
+<View
+  style={
+    {
+      "alignItems": "center",
+      "backgroundColor": "red",
+      "borderColor": "transparent",
+      "borderRadius": 1000,
+      "borderWidth": 1,
+      "justifyContent": "center",
+      "paddingHorizontal": 10,
+      "paddingVertical": 5,
+    }
+  }
+>
+  <Text
+    style={
+      {
+        "color": "white",
+        "fontSize": 17.89194962785868,
+        "fontWeight": "800",
+      }
+    }
+  >
+    tag1
+  </Text>
+</View>
+`;

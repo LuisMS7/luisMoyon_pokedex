@@ -3,9 +3,11 @@ import {
 	NativeStackScreenProps,
 } from "react-native-screens/native-stack";
 import { RouteProp } from "@react-navigation/native";
+import { Pokemon } from "@pokemon/types/pokemon.type";
 
 export type PokemonNavigatorStackParamList = {
-	Home: undefined;
+	HomeScreen: undefined;
+	PokemonDetailsScreen: { pokemon: Pokemon };
 };
 
 export type PokemonNavigationProps<

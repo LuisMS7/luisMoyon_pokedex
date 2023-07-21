@@ -1,0 +1,533 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`PokemonDetailsScreen should render correctly 1`] = `
+<View
+  style={
+    {
+      "backgroundColor": "#AAA67F",
+      "flexDirection": "column",
+      "height": "100%",
+    }
+  }
+>
+  <RCTSafeAreaView
+    style={
+      {
+        "flexDirection": "column",
+        "height": "100%",
+      }
+    }
+  >
+    <View
+      style={
+        {
+          "alignItems": "center",
+          "flexDirection": "row",
+          "paddingHorizontal": 20,
+          "width": "100%",
+        }
+      }
+    >
+      <View
+        style={
+          {
+            "position": "absolute",
+            "right": 0,
+            "top": 0,
+          }
+        }
+      >
+        <RNSVGSvgView
+          align="xMidYMid"
+          bbHeight="208"
+          bbWidth="206"
+          fill="none"
+          focusable={false}
+          height="208"
+          meetOrSlice={0}
+          minX={0}
+          minY={0}
+          style={
+            [
+              {
+                "backgroundColor": "transparent",
+                "borderWidth": 0,
+              },
+              {
+                "flex": 0,
+                "height": 208,
+                "width": 206,
+              },
+            ]
+          }
+          vbHeight={208}
+          vbWidth={206}
+          width="206"
+        >
+          <RNSVGGroup
+            fill={null}
+            propList={
+              [
+                "fill",
+              ]
+            }
+          >
+            <RNSVGGroup
+              opacity={0.1}
+            >
+              <RNSVGPath
+                d="M127.762 104C127.762 117.676 116.676 128.762 103 128.762C89.3244 128.762 78.2381 117.676 78.2381 104C78.2381 90.3244 89.3244 79.2381 103 79.2381C116.676 79.2381 127.762 90.3244 127.762 104Z"
+                fill={
+                  {
+                    "payload": 4294967295,
+                    "type": 0,
+                  }
+                }
+                propList={
+                  [
+                    "fill",
+                  ]
+                }
+              />
+              <RNSVGPath
+                clipRule={0}
+                d="M103 208C155.393 208 198.738 169.257 205.947 118.857H145.035C138.917 136.169 122.407 148.571 103 148.571C83.5933 148.571 67.0835 136.169 60.9648 118.857H0.0532056C7.26233 169.257 50.6067 208 103 208ZM60.9648 89.1429H0.0532056C7.26233 38.7431 50.6067 0 103 0C155.393 0 198.738 38.7431 205.947 89.1429H145.035C138.917 71.8314 122.407 59.4286 103 59.4286C83.5933 59.4286 67.0835 71.8314 60.9648 89.1429ZM127.762 104C127.762 117.676 116.676 128.762 103 128.762C89.3244 128.762 78.2381 117.676 78.2381 104C78.2381 90.3244 89.3244 79.2381 103 79.2381C116.676 79.2381 127.762 90.3244 127.762 104Z"
+                fill={
+                  {
+                    "payload": 4294967295,
+                    "type": 0,
+                  }
+                }
+                fillRule={0}
+                propList={
+                  [
+                    "fill",
+                    "fillRule",
+                  ]
+                }
+              />
+            </RNSVGGroup>
+          </RNSVGGroup>
+        </RNSVGSvgView>
+      </View>
+      <View
+        accessibilityState={
+          {
+            "busy": undefined,
+            "checked": undefined,
+            "disabled": undefined,
+            "expanded": undefined,
+            "selected": undefined,
+          }
+        }
+        accessibilityValue={
+          {
+            "max": undefined,
+            "min": undefined,
+            "now": undefined,
+            "text": undefined,
+          }
+        }
+        accessible={true}
+        collapsable={false}
+        focusable={true}
+        onBlur={[Function]}
+        onClick={[Function]}
+        onFocus={[Function]}
+        onResponderGrant={[Function]}
+        onResponderMove={[Function]}
+        onResponderRelease={[Function]}
+        onResponderTerminate={[Function]}
+        onResponderTerminationRequest={[Function]}
+        onStartShouldSetResponder={[Function]}
+        testID="back-button"
+      >
+        <RNSVGSvgView
+          align="xMidYMid"
+          bbHeight="32"
+          bbWidth="24"
+          fill="none"
+          focusable={false}
+          height="32"
+          meetOrSlice={0}
+          minX={0}
+          minY={0}
+          style={
+            [
+              {
+                "backgroundColor": "transparent",
+                "borderWidth": 0,
+              },
+              {
+                "flex": 0,
+                "height": 32,
+                "width": 24,
+              },
+            ]
+          }
+          vbHeight={32}
+          vbWidth={24}
+          width="24"
+        >
+          <RNSVGGroup
+            fill={null}
+            propList={
+              [
+                "fill",
+              ]
+            }
+          >
+            <RNSVGPath
+              d="M12.2305 24.5117L13.0039 23.7383C13.1869 23.5553 13.1869 23.2585 13.0039 23.0754L6.94408 17.0157H20.2812C20.5401 17.0157 20.75 16.8058 20.75 16.5469V15.4532C20.75 15.1943 20.5401 14.9844 20.2812 14.9844H6.94408L13.0039 8.92465C13.1869 8.7416 13.1869 8.4448 13.0039 8.26172L12.2305 7.48836C12.0474 7.30531 11.7506 7.30531 11.5675 7.48836L3.38729 15.6686C3.20424 15.8516 3.20424 16.1484 3.38729 16.3315L11.5675 24.5118C11.7506 24.6948 12.0474 24.6948 12.2305 24.5117Z"
+              fill={
+                {
+                  "payload": 4294967295,
+                  "type": 0,
+                }
+              }
+              propList={
+                [
+                  "fill",
+                ]
+              }
+            />
+          </RNSVGGroup>
+        </RNSVGSvgView>
+      </View>
+      <Text
+        style={
+          {
+            "color": "white",
+            "flex": 1,
+            "fontSize": 47.71186567428981,
+            "fontWeight": "800",
+            "paddingLeft": 10.436970616250896,
+          }
+        }
+      >
+        Mockpokemonname
+      </Text>
+      <Text
+        style={
+          {
+            "color": "white",
+            "fontSize": 23.855932837144906,
+            "fontWeight": "800",
+          }
+        }
+      >
+        #
+        0001
+      </Text>
+    </View>
+    <View
+      style={
+        {
+          "alignItems": "center",
+          "marginTop": 10,
+        }
+      }
+    >
+      <Image
+        source={
+          {
+            "uri": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/1.png",
+          }
+        }
+        style={
+          {
+            "height": 298.1991604643113,
+            "width": "50%",
+          }
+        }
+      />
+    </View>
+    <RCTScrollView
+      contentContainerStyle={
+        {
+          "padding": 29.819916046431132,
+        }
+      }
+      style={
+        {
+          "alignSelf": "center",
+          "flex": 1,
+          "width": "95%",
+        }
+      }
+    >
+      <View>
+        <View
+          style={
+            {
+              "alignSelf": "center",
+              "flexDirection": "row",
+              "flexWrap": "wrap",
+              "gap": 10,
+              "justifyContent": "flex-start",
+            }
+          }
+        >
+          <View
+            style={
+              {
+                "alignItems": "center",
+                "backgroundColor": "#AAA67F",
+                "borderColor": "transparent",
+                "borderRadius": 1000,
+                "borderWidth": 1,
+                "justifyContent": "center",
+                "paddingHorizontal": 10,
+                "paddingVertical": 5,
+              }
+            }
+          >
+            <Text
+              style={
+                {
+                  "color": "white",
+                  "fontSize": 17.89194962785868,
+                  "fontWeight": "800",
+                }
+              }
+            >
+              normal
+            </Text>
+          </View>
+        </View>
+        <Text
+          style={
+            {
+              "color": "#AAA67F",
+              "fontSize": 35.78389925571736,
+              "fontWeight": "800",
+              "paddingVertical": 20,
+              "textAlign": "center",
+            }
+          }
+        >
+          About
+        </Text>
+        <Text
+          style={
+            {
+              "fontSize": 23.855932837144906,
+              "textAlign": "center",
+            }
+          }
+        >
+          10
+           kg
+        </Text>
+        <Text
+          style={
+            {
+              "fontSize": 23.855932837144906,
+              "textAlign": "center",
+            }
+          }
+        >
+          Weight
+        </Text>
+        <Text
+          style={
+            {
+              "color": "#AAA67F",
+              "fontSize": 35.78389925571736,
+              "fontWeight": "800",
+              "paddingVertical": 20,
+              "textAlign": "center",
+            }
+          }
+        >
+          Sprites
+        </Text>
+        <RCTScrollView
+          contentContainerStyle={
+            {
+              "alignSelf": "center",
+              "flexDirection": "row",
+              "gap": 14.909958023215566,
+            }
+          }
+          horizontal={true}
+        >
+          <View>
+            <View
+              style={
+                {
+                  "alignItems": "center",
+                  "borderRadius": 1000,
+                  "height": 119.27966418572453,
+                  "justifyContent": "center",
+                  "width": 119.27966418572453,
+                }
+              }
+            >
+              <Image
+                resizeMode="cover"
+                source={
+                  {
+                    "uri": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/1.png",
+                  }
+                }
+                style={
+                  {
+                    "height": 89.4597481392934,
+                    "width": 89.4597481392934,
+                  }
+                }
+              />
+            </View>
+            <View
+              style={
+                {
+                  "alignItems": "center",
+                  "borderRadius": 1000,
+                  "height": 119.27966418572453,
+                  "justifyContent": "center",
+                  "width": 119.27966418572453,
+                }
+              }
+            />
+            <View
+              style={
+                {
+                  "alignItems": "center",
+                  "borderRadius": 1000,
+                  "height": 119.27966418572453,
+                  "justifyContent": "center",
+                  "width": 119.27966418572453,
+                }
+              }
+            />
+            <View
+              style={
+                {
+                  "alignItems": "center",
+                  "borderRadius": 1000,
+                  "height": 119.27966418572453,
+                  "justifyContent": "center",
+                  "width": 119.27966418572453,
+                }
+              }
+            />
+            <View
+              style={
+                {
+                  "alignItems": "center",
+                  "borderRadius": 1000,
+                  "height": 119.27966418572453,
+                  "justifyContent": "center",
+                  "width": 119.27966418572453,
+                }
+              }
+            />
+            <View
+              style={
+                {
+                  "alignItems": "center",
+                  "borderRadius": 1000,
+                  "height": 119.27966418572453,
+                  "justifyContent": "center",
+                  "width": 119.27966418572453,
+                }
+              }
+            />
+            <View
+              style={
+                {
+                  "alignItems": "center",
+                  "borderRadius": 1000,
+                  "height": 119.27966418572453,
+                  "justifyContent": "center",
+                  "width": 119.27966418572453,
+                }
+              }
+            />
+            <View
+              style={
+                {
+                  "alignItems": "center",
+                  "borderRadius": 1000,
+                  "height": 119.27966418572453,
+                  "justifyContent": "center",
+                  "width": 119.27966418572453,
+                }
+              }
+            />
+          </View>
+        </RCTScrollView>
+        <Text
+          style={
+            {
+              "color": "#AAA67F",
+              "fontSize": 35.78389925571736,
+              "fontWeight": "800",
+              "paddingVertical": 20,
+              "textAlign": "center",
+            }
+          }
+        >
+          Moves
+        </Text>
+        <View
+          style={
+            {
+              "alignSelf": "center",
+              "flexDirection": "row",
+              "flexWrap": "wrap",
+              "gap": 10,
+              "justifyContent": "flex-start",
+            }
+          }
+        >
+          <View
+            style={
+              {
+                "alignItems": "center",
+                "backgroundColor": "white",
+                "borderColor": "#AAA67F",
+                "borderRadius": 1000,
+                "borderWidth": 1,
+                "justifyContent": "center",
+                "paddingHorizontal": 10,
+                "paddingVertical": 5,
+              }
+            }
+          >
+            <Text
+              style={
+                {
+                  "color": "black",
+                  "fontSize": 17.89194962785868,
+                  "fontWeight": "400",
+                }
+              }
+            >
+              normal
+            </Text>
+          </View>
+        </View>
+      </View>
+    </RCTScrollView>
+    <View
+      style={
+        {
+          "alignSelf": "center",
+          "backgroundColor": "white",
+          "borderTopLeftRadius": 26.83792444178802,
+          "borderTopRightRadius": 26.83792444178802,
+          "bottom": 0,
+          "height": "78%",
+          "paddingHorizontal": 29.819916046431132,
+          "paddingTop": 119.27966418572453,
+          "position": "absolute",
+          "width": "95%",
+          "zIndex": -10,
+        }
+      }
+    />
+  </RCTSafeAreaView>
+</View>
+`;

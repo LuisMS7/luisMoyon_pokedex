@@ -1,6 +1,6 @@
-import React, { useEffect, useMemo, useState } from "react";
+import React, { useCallback, useEffect, useMemo, useState } from "react";
 import { Pokemon } from "@pokemon/types/pokemon.type";
-import { StyleSheet, Text, View } from "react-native";
+import { Image, StyleSheet, Text, TouchableOpacity, View } from "react-native";
 import SvgUri from "react-native-svg-uri";
 import { TypeColor } from "@pokemon/utils/color-by-type";
 import { perfectSize } from "@utils/perfect-size";
@@ -11,15 +11,19 @@ import { PokemonListItemApiResponse } from "@pokemon/types/pokemon-list-api-resp
 import { useApi } from "@hooks/useApi";
 import getPokemonByName from "@pokemon/store/actions/get-pokemon-by-name";
 import { PokemonApiResponse } from "@pokemon/types/pokemon-api-response.type";
+import { PokemonNavigationType } from "@pokemon/types/pokemon-navigator.type";
+import { useNavigation } from "@react-navigation/native";
 
 type PokemonCardType = {
 	pokemonItem: PokemonListItemApiResponse;
 };
+
 const PokemonCard = ({ pokemonItem }: PokemonCardType) => {
 	const [pokemon, setPokemon] = useState<Pokemon>();
 	const { request, response } = useApi<PokemonApiResponse>(() =>
 		getPokemonByName(pokemonItem.name),
 	);
+	const navigation = useNavigation<PokemonNavigationType<"HomeScreen">>();
 
 	useEffect(() => {
 		request();
@@ -31,6 +35,8 @@ const PokemonCard = ({ pokemonItem }: PokemonCardType) => {
 				id: response.id,
 				name: response.name,
 				img:
+					response?.sprites?.other?.["official-artwork"]
+						?.front_default ||
 					response?.sprites?.other?.dream_world?.front_default ||
 					response?.sprites?.front_default,
 				types: response.types,
@@ -46,21 +52,46 @@ const PokemonCard = ({ pokemonItem }: PokemonCardType) => {
 		return pokemon ? TypeColor[pokemon.types[0].type.name] : "white";
 	}, [pokemon]);
 
-	return (
-		<View style={{ ...styles.container, borderColor: typeColor }}>
-			<Text style={{ ...styles.idText, color: typeColor }}>
-				#{pokemon?.id.toString().padStart(4, "0")}
-			</Text>
-			<View style={styles.image}>
+	const onPressPokemonCard = () => {
+		if (pokemon) {
+			navigation.navigate("PokemonDetailsScreen", { pokemon: pokemon });
+		}
+	};
+	const getPokemonImg = useCallback(() => {
+		if (
+			pokemon?.img &&
+			(pokemon?.img.endsWith("jpg") || pokemon?.img.endsWith("png"))
+		) {
+			return (
+				<Image
+					source={{ uri: pokemon.img }}
+					style={{ height: perfectSize(250), width: "80%" }}
+				/>
+			);
+		} else if (pokemon?.img && pokemon?.img.endsWith("svg")) {
+			return (
 				<SvgUri
 					source={{ uri: pokemon?.img }}
 					height={perfectSize(250)}
 				/>
-			</View>
+			);
+		}
+		return null;
+	}, [pokemon]);
+
+	return (
+		<TouchableOpacity
+			style={{ ...styles.container, borderColor: typeColor }}
+			onPress={onPressPokemonCard}
+		>
+			<Text style={{ ...styles.idText, color: typeColor }}>
+				#{pokemon?.id.toString().padStart(4, "0")}
+			</Text>
+			<View style={styles.image}>{getPokemonImg()}</View>
 			<Text style={{ ...styles.nameText, backgroundColor: typeColor }}>
 				{titlecase(pokemon?.name.toUpperCase())}
 			</Text>
-		</View>
+		</TouchableOpacity>
 	);
 };
 

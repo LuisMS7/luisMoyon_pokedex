@@ -1,0 +1,120 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`PokemonSprites should render correctly 1`] = `
+<RCTScrollView
+  contentContainerStyle={
+    {
+      "alignSelf": "center",
+      "flexDirection": "row",
+      "gap": 14.909958023215566,
+    }
+  }
+  horizontal={true}
+>
+  <View>
+    <View
+      style={
+        {
+          "alignItems": "center",
+          "borderRadius": 1000,
+          "height": 119.27966418572453,
+          "justifyContent": "center",
+          "width": 119.27966418572453,
+        }
+      }
+    >
+      <Image
+        resizeMode="cover"
+        source={
+          {
+            "uri": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/1.png",
+          }
+        }
+        style={
+          {
+            "height": 89.4597481392934,
+            "width": 89.4597481392934,
+          }
+        }
+      />
+    </View>
+    <View
+      style={
+        {
+          "alignItems": "center",
+          "borderRadius": 1000,
+          "height": 119.27966418572453,
+          "justifyContent": "center",
+          "width": 119.27966418572453,
+        }
+      }
+    />
+    <View
+      style={
+        {
+          "alignItems": "center",
+          "borderRadius": 1000,
+          "height": 119.27966418572453,
+          "justifyContent": "center",
+          "width": 119.27966418572453,
+        }
+      }
+    />
+    <View
+      style={
+        {
+          "alignItems": "center",
+          "borderRadius": 1000,
+          "height": 119.27966418572453,
+          "justifyContent": "center",
+          "width": 119.27966418572453,
+        }
+      }
+    />
+    <View
+      style={
+        {
+          "alignItems": "center",
+          "borderRadius": 1000,
+          "height": 119.27966418572453,
+          "justifyContent": "center",
+          "width": 119.27966418572453,
+        }
+      }
+    />
+    <View
+      style={
+        {
+          "alignItems": "center",
+          "borderRadius": 1000,
+          "height": 119.27966418572453,
+          "justifyContent": "center",
+          "width": 119.27966418572453,
+        }
+      }
+    />
+    <View
+      style={
+        {
+          "alignItems": "center",
+          "borderRadius": 1000,
+          "height": 119.27966418572453,
+          "justifyContent": "center",
+          "width": 119.27966418572453,
+        }
+      }
+    />
+    <View
+      style={
+        {
+          "alignItems": "center",
+          "borderRadius": 1000,
+          "height": 119.27966418572453,
+          "justifyContent": "center",
+          "width": 119.27966418572453,
+        }
+      }
+    />
+  </View>
+</RCTScrollView>
+`;

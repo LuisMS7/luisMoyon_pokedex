@@ -1,0 +1,21 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`PokemonDetailsInfoBackground should render correctly 1`] = `
+<View
+  style={
+    {
+      "alignSelf": "center",
+      "backgroundColor": "white",
+      "borderTopLeftRadius": 26.83792444178802,
+      "borderTopRightRadius": 26.83792444178802,
+      "bottom": 0,
+      "height": "78%",
+      "paddingHorizontal": 29.819916046431132,
+      "paddingTop": 119.27966418572453,
+      "position": "absolute",
+      "width": "95%",
+      "zIndex": -10,
+    }
+  }
+/>
+`;
