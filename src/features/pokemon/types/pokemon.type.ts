@@ -1,4 +1,4 @@
-import { Move, Sprites, Type } from "@pokemon/types/PokemonApiResponse.type";
+import { Move, Sprites, Type } from "@pokemon/types/pokemon-api-response.type";
 
 export type Pokemon = {
 	id: number;
@@ -7,5 +7,5 @@ export type Pokemon = {
 	types: Type[];
 	weight?: number;
 	sprites?: Sprites;
-	moves?: Move;
+	moves?: Move[];
 };

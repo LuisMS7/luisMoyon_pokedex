@@ -17,5 +17,6 @@ export const NORMAL_WEIGHT = "400";
 export const BOLD_WEIGHT = "800";
 
 export enum API_ENDPOINTS {
-	pokemons = "api/v2/pokemon",
+	all_pokemons = "api/v2/pokemon",
+	pokemons_by_name = "api/v2/pokemon/{pokemon_name}",
 }

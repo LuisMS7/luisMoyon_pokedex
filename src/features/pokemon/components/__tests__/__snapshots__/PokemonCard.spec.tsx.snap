@@ -8,8 +8,8 @@ exports[`PokemonCard should render correctly 1`] = `
       "borderRadius": 23.855932837144906,
       "borderWidth": 5.963983209286226,
       "flexDirection": "column",
-      "height": "40%",
-      "width": "80%",
+      "height": "100%",
+      "width": 521.8485308125448,
     }
   }
 >
@@ -46,7 +46,7 @@ exports[`PokemonCard should render correctly 1`] = `
       }
     }
   >
-    Bulbasaur
+    Mockpokemon
   </Text>
 </View>
 `;

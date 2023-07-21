@@ -1,26 +1,23 @@
 import "react-native";
 import React from "react";
 import { render, screen } from "@testing-library/react-native";
-import PokemonCard from "@pokemon/components/PokemonCard";
 // eslint-disable-next-line max-len
 import { PokemonListItemApiResponse } from "@pokemon/types/pokemon-list-api-response.type";
 import { mockGetOnSuccess } from "@utils/test-utils/axios-mock";
 import { API_ENDPOINTS } from "@lib/constants";
+import HomeScreen from "@pokemon/screens/HomeScreen";
 
-describe("PokemonCard", () => {
+describe("HomeScreen", () => {
 	it("should render correctly", async () => {
-		const mockPokemonName = "mockPokemon";
-		const mockPokemonItem: PokemonListItemApiResponse = {
-			name: mockPokemonName,
-			url: "",
-		};
-		const mockEndpoint = API_ENDPOINTS.pokemons_by_name.replace(
-			"{pokemon_name}",
-			mockPokemonName,
-		);
+		const mockPokemons: PokemonListItemApiResponse[] = [
+			{
+				name: "mockPokemon1",
+				url: "",
+			},
+		];
 		const mockPokemon = {
 			id: 1,
-			name: mockPokemonName,
+			name: "mockPokemon1",
 			sprites: {
 				other: {
 					dream_world: {
@@ -41,12 +38,17 @@ describe("PokemonCard", () => {
 			weight: 0,
 			moves: [],
 		};
-		mockGetOnSuccess(mockEndpoint, mockPokemon);
-		const { rerender } = render(
-			<PokemonCard pokemonItem={mockPokemonItem} />,
+		mockGetOnSuccess(API_ENDPOINTS.all_pokemons, mockPokemons);
+		mockGetOnSuccess(
+			API_ENDPOINTS.pokemons_by_name.replace(
+				"{pokemon_name}",
+				"mockPokemon1",
+			),
+			mockPokemon,
 		);
+		const { rerender } = render(<HomeScreen />);
 		await Promise.resolve();
-		await rerender(<PokemonCard pokemonItem={mockPokemonItem} />);
+		await rerender(<HomeScreen />);
 		expect(screen.toJSON()).toMatchSnapshot();
 	});
 });

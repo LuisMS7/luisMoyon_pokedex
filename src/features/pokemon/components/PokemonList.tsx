@@ -1,17 +1,20 @@
 import React from "react";
 import { FlatList, ListRenderItemInfo, StyleSheet, View } from "react-native";
 import PokemonCard from "@pokemon/components/PokemonCard";
-import { Pokemon } from "@pokemon/types/Pokemon.type";
 import { perfectSize } from "@utils/perfect-size";
+// eslint-disable-next-line max-len
+import { PokemonListItemApiResponse } from "@pokemon/types/pokemon-list-api-response.type";
 
 type PokemonListProps = {
-	pokemons: Pokemon[];
+	pokemonsItems: PokemonListItemApiResponse[];
 };
 
-const PokemonList = ({ pokemons }: PokemonListProps) => {
-	const renderPokemonCard = (listItem: ListRenderItemInfo<Pokemon>) => {
-		const pokemon: Pokemon = listItem.item;
-		return <PokemonCard pokemon={pokemon} key={pokemon.name} />;
+const PokemonList = ({ pokemonsItems }: PokemonListProps) => {
+	const renderPokemonCard = (
+		listItem: ListRenderItemInfo<PokemonListItemApiResponse>,
+	) => {
+		const pokemonItem: PokemonListItemApiResponse = listItem.item;
+		return <PokemonCard pokemonItem={pokemonItem} key={pokemonItem.name} />;
 	};
 
 	const ItemSeparator = () => {
@@ -21,7 +24,7 @@ const PokemonList = ({ pokemons }: PokemonListProps) => {
 	return (
 		<View style={styles.container}>
 			<FlatList
-				data={pokemons}
+				data={pokemonsItems}
 				renderItem={renderPokemonCard}
 				horizontal
 				ListHeaderComponent={ItemSeparator}
