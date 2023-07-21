@@ -16,14 +16,16 @@ export const useApi = <T>(
 
 	const request = async () => {
 		let response = null;
-		try {
-			setLoading(true);
-			response = (await apiRequest()).data;
-			setResponse(response);
-		} catch {
-			setError(true);
+		if (!loading) {
+			try {
+				setLoading(true);
+				response = (await apiRequest()).data;
+				setResponse(response);
+			} catch {
+				setError(true);
+			}
+			setLoading(false);
 		}
-		setLoading(false);
 
 		return response;
 	};

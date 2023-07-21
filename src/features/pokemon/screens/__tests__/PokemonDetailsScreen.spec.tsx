@@ -9,6 +9,12 @@ import {
 } from "@pokemon/types/pokemon-navigator.type";
 import { NavigationContainer } from "@react-navigation/native";
 
+jest.mock("react-native-safe-area-context", () => ({
+	useSafeAreaInsets: jest.fn(() => ({
+		top: 20,
+	})),
+}));
+
 const createTestProps = (): unknown &
 	PokemonNavigationProps<"PokemonDetailsScreen"> => ({
 	navigation:

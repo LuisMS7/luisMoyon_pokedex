@@ -1,0 +1,120 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`FilterHeader should render correctly 1`] = `
+<View
+  style={
+    {
+      "alignItems": "center",
+      "height": 89.4597481392934,
+      "justifyContent": "center",
+      "paddingHorizontal": 29.819916046431132,
+      "paddingVertical": 74.54979011607783,
+      "width": "100%",
+    }
+  }
+>
+  <View
+    style={
+      {
+        "alignItems": "center",
+        "borderColor": "black",
+        "borderRadius": 29.819916046431132,
+        "borderWidth": 1,
+        "flexDirection": "row",
+        "height": 89.4597481392934,
+        "justifyContent": "center",
+        "paddingLeft": 29.819916046431132,
+        "width": "100%",
+      }
+    }
+  >
+    <View
+      style={
+        {
+          "flex": 1,
+          "height": "100%",
+          "justifyContent": "space-around",
+        }
+      }
+    >
+      <Text
+        style={
+          {
+            "fontSize": 17.89194962785868,
+            "fontWeight": "800",
+          }
+        }
+      >
+        Search
+      </Text>
+      <TextInput
+        autoCapitalize="none"
+        autoCorrect={false}
+        onChangeText={[Function]}
+        placeholder="Pokemon name"
+        style={
+          {
+            "fontSize": 20.873941232501792,
+            "fontWeight": "400",
+          }
+        }
+        testID="pokemon-name-text-input"
+        value=""
+      />
+    </View>
+    <View
+      accessibilityState={
+        {
+          "busy": undefined,
+          "checked": undefined,
+          "disabled": undefined,
+          "expanded": undefined,
+          "selected": undefined,
+        }
+      }
+      accessibilityValue={
+        {
+          "max": undefined,
+          "min": undefined,
+          "now": undefined,
+          "text": undefined,
+        }
+      }
+      accessible={true}
+      collapsable={false}
+      focusable={true}
+      onBlur={[Function]}
+      onClick={[Function]}
+      onFocus={[Function]}
+      onResponderGrant={[Function]}
+      onResponderMove={[Function]}
+      onResponderRelease={[Function]}
+      onResponderTerminate={[Function]}
+      onResponderTerminationRequest={[Function]}
+      onStartShouldSetResponder={[Function]}
+      style={
+        {
+          "alignItems": "center",
+          "backgroundColor": "black",
+          "borderBottomRightRadius": 29.819916046431132,
+          "borderTopRightRadius": 29.819916046431132,
+          "height": "100%",
+          "justifyContent": "center",
+          "width": 149.09958023215566,
+        }
+      }
+    >
+      <Text
+        style={
+          {
+            "color": "white",
+            "fontSize": 29.819916046431132,
+          }
+        }
+      >
+        Filter
+      </Text>
+    </View>
+  </View>
+</View>
+`;

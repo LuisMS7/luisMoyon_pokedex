@@ -7,6 +7,7 @@ exports[`PokemonDetailsScreen should render correctly 1`] = `
       "backgroundColor": "#AAA67F",
       "flexDirection": "column",
       "height": "100%",
+      "paddingTop": 0,
     }
   }
 >
@@ -229,6 +230,7 @@ exports[`PokemonDetailsScreen should render correctly 1`] = `
       }
     >
       <Image
+        resizeMode="contain"
         source={
           {
             "uri": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/1.png",

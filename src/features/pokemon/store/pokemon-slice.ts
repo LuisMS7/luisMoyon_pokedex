@@ -1,15 +1,16 @@
 import { create } from "zustand";
 // eslint-disable-next-line max-len
 import { PokemonListItemApiResponse } from "@pokemon/types/pokemon-list-api-response.type";
+import { PokemonApiResponse } from "@pokemon/types/pokemon-api-response.type";
 
 type State = {
 	pokemons: PokemonListItemApiResponse[];
 	updatePokemons: (pokemons: PokemonListItemApiResponse[]) => void;
-	setPokemons: (pokemons: PokemonListItemApiResponse[]) => void;
+	setPokemons: (pokemon: PokemonApiResponse) => void;
 	clearPokemons: () => void;
 };
 
-const usePokemonStore = create<State>((set, get) => ({
+export const usePokemonStore = create<State>((set, get) => ({
 	pokemons: [],
 	updatePokemons: (pokemons: PokemonListItemApiResponse[]) => {
 		const currentPokemonsList = get().pokemons;
@@ -18,9 +19,14 @@ const usePokemonStore = create<State>((set, get) => ({
 			pokemons: updatePokemonsList,
 		});
 	},
-	setPokemons: (pokemons: PokemonListItemApiResponse[]) => {
+	setPokemons: (pokemon: PokemonApiResponse) => {
 		set({
-			pokemons: pokemons,
+			pokemons: [
+				{
+					name: pokemon.name,
+					url: "",
+				},
+			],
 		});
 	},
 	clearPokemons: () =>
@@ -28,5 +34,3 @@ const usePokemonStore = create<State>((set, get) => ({
 			pokemons: [],
 		}),
 }));
-
-export default usePokemonStore;

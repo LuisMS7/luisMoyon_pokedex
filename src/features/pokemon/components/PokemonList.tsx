@@ -1,5 +1,12 @@
-import React, { useCallback } from "react";
-import { FlatList, ListRenderItemInfo, StyleSheet, View } from "react-native";
+import React, { useCallback, useEffect, useRef } from "react";
+import {
+	FlatList,
+	ListRenderItemInfo,
+	NativeScrollEvent,
+	NativeSyntheticEvent,
+	StyleSheet,
+	View,
+} from "react-native";
 import PokemonCard from "@pokemon/components/PokemonCard";
 import { perfectSize } from "@utils/perfect-size";
 // eslint-disable-next-line max-len
@@ -11,6 +18,8 @@ type PokemonListProps = {
 };
 
 const PokemonList = ({ pokemonsItems, loadMorePokemons }: PokemonListProps) => {
+	const isFetchingData = useRef(false);
+	const fetchTimeout = useRef<NodeJS.Timeout>();
 	const renderPokemonCard = useCallback(
 		(listItem: ListRenderItemInfo<PokemonListItemApiResponse>) => {
 			const pokemonItem: PokemonListItemApiResponse = listItem.item;
@@ -21,31 +30,52 @@ const PokemonList = ({ pokemonsItems, loadMorePokemons }: PokemonListProps) => {
 		[],
 	);
 
+	useEffect(() => {
+		return () => {
+			if (fetchTimeout.current) {
+				clearTimeout(fetchTimeout.current);
+			}
+		};
+	}, []);
+
 	const ItemSeparator = () => {
 		return <View style={styles.itemSeparator} />;
 	};
 
+	const handleScroll = ({
+		nativeEvent,
+	}: NativeSyntheticEvent<NativeScrollEvent>) => {
+		const contentOffsetX = nativeEvent.contentOffset.x;
+		const contentSizeWidth = nativeEvent.contentSize.width;
+		const layoutSizeWidth = nativeEvent.layoutMeasurement.width;
+		if (
+			contentSizeWidth - (contentOffsetX + layoutSizeWidth) <= 100 &&
+			pokemonsItems.length > 1
+		) {
+			if (!isFetchingData.current) {
+				isFetchingData.current = true;
+				fetchTimeout.current = setTimeout(() => {
+					loadMorePokemons();
+					isFetchingData.current = false;
+				}, 500);
+			}
+		}
+	};
+
 	return (
 		<View style={styles.container}>
-			<FlatList
-				data={pokemonsItems}
-				renderItem={renderPokemonCard}
-				horizontal
-				ListHeaderComponent={ItemSeparator}
-				ItemSeparatorComponent={ItemSeparator}
-				ListFooterComponent={ItemSeparator}
-				onScroll={({ nativeEvent }) => {
-					const contentOffsetX = nativeEvent.contentOffset.x;
-					const contentSizeWidth = nativeEvent.contentSize.width;
-					const layoutSizeWidth = nativeEvent.layoutMeasurement.width;
-					if (
-						contentSizeWidth - (contentOffsetX + layoutSizeWidth) <=
-						100
-					) {
-						loadMorePokemons();
-					}
-				}}
-			/>
+			<View style={styles.listContainer}>
+				<FlatList
+					data={pokemonsItems}
+					renderItem={renderPokemonCard}
+					horizontal
+					ListHeaderComponent={ItemSeparator}
+					ItemSeparatorComponent={ItemSeparator}
+					ListFooterComponent={ItemSeparator}
+					onScroll={handleScroll}
+					style={styles.list}
+				/>
+			</View>
 		</View>
 	);
 };
@@ -55,8 +85,12 @@ const styles = StyleSheet.create({
 		width: perfectSize(20),
 	},
 	container: {
-		height: "50%",
+		flex: 1,
+		alignSelf: "center",
+		justifyContent: "center",
 	},
+	listContainer: { height: "70%" },
+	list: { height: "70%", flex: 1 },
 });
 
 export default PokemonList;

@@ -1,0 +1,38 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`FilterByNameInput should render correctly 1`] = `
+<View
+  style={
+    {
+      "flex": 1,
+      "height": "100%",
+      "justifyContent": "space-around",
+    }
+  }
+>
+  <Text
+    style={
+      {
+        "fontSize": 17.89194962785868,
+        "fontWeight": "800",
+      }
+    }
+  >
+    Search
+  </Text>
+  <TextInput
+    autoCapitalize="none"
+    autoCorrect={false}
+    onChangeText={[Function]}
+    placeholder="Pokemon name"
+    style={
+      {
+        "fontSize": 20.873941232501792,
+        "fontWeight": "400",
+      }
+    }
+    testID="pokemon-name-text-input"
+    value=""
+  />
+</View>
+`;

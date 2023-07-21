@@ -6,6 +6,7 @@ import PokemonCard from "@pokemon/components/PokemonCard";
 import { PokemonListItemApiResponse } from "@pokemon/types/pokemon-list-api-response.type";
 import { mockGetOnSuccess } from "@utils/test-utils/axios-mock";
 import { API_ENDPOINTS } from "@lib/constants";
+import { NavigationContainer } from "@react-navigation/native";
 
 describe("PokemonCard", () => {
 	it("should render correctly", async () => {
@@ -44,6 +45,9 @@ describe("PokemonCard", () => {
 		mockGetOnSuccess(mockEndpoint, mockPokemon);
 		const { rerender } = render(
 			<PokemonCard pokemonItem={mockPokemonItem} />,
+			{
+				wrapper: NavigationContainer,
+			},
 		);
 		await Promise.resolve();
 		await rerender(<PokemonCard pokemonItem={mockPokemonItem} />);

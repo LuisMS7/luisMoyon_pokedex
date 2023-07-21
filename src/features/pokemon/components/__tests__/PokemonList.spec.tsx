@@ -6,6 +6,7 @@ import PokemonList from "@pokemon/components/PokemonList";
 import { PokemonListItemApiResponse } from "@pokemon/types/pokemon-list-api-response.type";
 import { mockGetOnSuccess } from "@utils/test-utils/axios-mock";
 import { API_ENDPOINTS } from "@lib/constants";
+import { NavigationContainer } from "@react-navigation/native";
 
 describe("PokemonCard", () => {
 	it("should render correctly", async () => {
@@ -114,10 +115,19 @@ describe("PokemonCard", () => {
 			thirdMockPokemon,
 		);
 		const { rerender } = render(
-			<PokemonList pokemonsItems={mockPokemons} />,
+			<PokemonList
+				pokemonsItems={mockPokemons}
+				loadMorePokemons={jest.fn()}
+			/>,
+			{ wrapper: NavigationContainer },
 		);
 		await Promise.resolve();
-		await rerender(<PokemonList pokemonsItems={mockPokemons} />);
+		await rerender(
+			<PokemonList
+				pokemonsItems={mockPokemons}
+				loadMorePokemons={jest.fn()}
+			/>,
+		);
 		expect(screen.toJSON()).toMatchSnapshot();
 	});
 });

@@ -6,6 +6,18 @@ import { PokemonListItemApiResponse } from "@pokemon/types/pokemon-list-api-resp
 import { mockGetOnSuccess } from "@utils/test-utils/axios-mock";
 import { API_ENDPOINTS } from "@lib/constants";
 import HomeScreen from "@pokemon/screens/HomeScreen";
+import { usePokemonStore } from "@pokemon/store/pokemon-slice";
+import { NavigationContainer } from "@react-navigation/native";
+
+jest.mock("@pokemon/store/pokemon-slice", () => ({
+	usePokemonStore: jest.fn(),
+}));
+
+jest.mock("react-native-safe-area-context", () => ({
+	useSafeAreaInsets: jest.fn(() => ({
+		top: 20,
+	})),
+}));
 
 describe("HomeScreen", () => {
 	it("should render correctly", async () => {
@@ -15,6 +27,16 @@ describe("HomeScreen", () => {
 				url: "",
 			},
 		];
+		(usePokemonStore as unknown as jest.Mock).mockImplementation(
+			(selector) =>
+				selector({
+					pokemons: mockPokemons,
+					updatePokemons: jest.fn(),
+					setPokemons: jest.fn(),
+					clearPokemons: jest.fn(),
+				}),
+		);
+
 		const mockPokemon = {
 			id: 1,
 			name: "mockPokemon1",
@@ -46,7 +68,9 @@ describe("HomeScreen", () => {
 			),
 			mockPokemon,
 		);
-		const { rerender } = render(<HomeScreen />);
+		const { rerender } = render(<HomeScreen />, {
+			wrapper: NavigationContainer,
+		});
 		await Promise.resolve();
 		await rerender(<HomeScreen />);
 		expect(screen.toJSON()).toMatchSnapshot();
