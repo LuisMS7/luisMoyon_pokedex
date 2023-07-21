@@ -1,0 +1,322 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`PokemonCard should render correctly 1`] = `
+<View
+  style={
+    {
+      "height": "50%",
+    }
+  }
+>
+  <RCTScrollView
+    ItemSeparatorComponent={[Function]}
+    ListFooterComponent={[Function]}
+    ListHeaderComponent={[Function]}
+    data={
+      [
+        {
+          "id": 1,
+          "img": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/dream-world/1.svg",
+          "name": "bulbasaur",
+          "types": [
+            {
+              "slot": 1,
+              "type": {
+                "name": "poison",
+                "url": "https://pokeapi.co/api/v2/type/12/",
+              },
+            },
+            {
+              "slot": 2,
+              "type": {
+                "name": "poison",
+                "url": "https://pokeapi.co/api/v2/type/4/",
+              },
+            },
+          ],
+        },
+        {
+          "id": 2,
+          "img": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/dream-world/4.svg",
+          "name": "bulbasaur2",
+          "types": [
+            {
+              "slot": 1,
+              "type": {
+                "name": "grass",
+                "url": "https://pokeapi.co/api/v2/type/12/",
+              },
+            },
+            {
+              "slot": 2,
+              "type": {
+                "name": "poison",
+                "url": "https://pokeapi.co/api/v2/type/4/",
+              },
+            },
+          ],
+        },
+        {
+          "id": 3,
+          "img": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/dream-world/33.svg",
+          "name": "bulbasaur3",
+          "types": [
+            {
+              "slot": 1,
+              "type": {
+                "name": "ghost",
+                "url": "https://pokeapi.co/api/v2/type/12/",
+              },
+            },
+            {
+              "slot": 2,
+              "type": {
+                "name": "poison",
+                "url": "https://pokeapi.co/api/v2/type/4/",
+              },
+            },
+          ],
+        },
+      ]
+    }
+    getItem={[Function]}
+    getItemCount={[Function]}
+    horizontal={true}
+    keyExtractor={[Function]}
+    onContentSizeChange={[Function]}
+    onLayout={[Function]}
+    onMomentumScrollBegin={[Function]}
+    onMomentumScrollEnd={[Function]}
+    onScroll={[Function]}
+    onScrollBeginDrag={[Function]}
+    onScrollEndDrag={[Function]}
+    removeClippedSubviews={false}
+    renderItem={[Function]}
+    scrollEventThrottle={50}
+    stickyHeaderIndices={[]}
+    viewabilityConfigCallbackPairs={[]}
+  >
+    <View>
+      <View
+        onLayout={[Function]}
+      >
+        <View
+          style={
+            {
+              "width": 29.819916046431132,
+            }
+          }
+        />
+      </View>
+      <View
+        onFocusCapture={[Function]}
+        onLayout={[Function]}
+        style={
+          [
+            {
+              "flexDirection": "row",
+            },
+            null,
+          ]
+        }
+      >
+        <View
+          style={
+            {
+              "borderColor": "#A43E9E",
+              "borderRadius": 23.855932837144906,
+              "borderWidth": 5.963983209286226,
+              "flexDirection": "column",
+              "height": "100%",
+              "width": 521.8485308125448,
+            }
+          }
+        >
+          <Text
+            style={
+              {
+                "color": "#A43E9E",
+                "fontSize": 29.819916046431132,
+                "padding": 29.819916046431132,
+                "textAlign": "right",
+                "width": "100%",
+              }
+            }
+          >
+            #
+            0001
+          </Text>
+          <View
+            style={
+              {
+                "alignItems": "center",
+                "flex": 1,
+              }
+            }
+          />
+          <Text
+            style={
+              {
+                "backgroundColor": "#A43E9E",
+                "color": "white",
+                "fontSize": 35.78389925571736,
+                "paddingVertical": 29.819916046431132,
+                "textAlign": "center",
+              }
+            }
+          >
+            Bulbasaur
+          </Text>
+        </View>
+        <View
+          style={
+            {
+              "width": 29.819916046431132,
+            }
+          }
+        />
+      </View>
+      <View
+        onFocusCapture={[Function]}
+        onLayout={[Function]}
+        style={
+          [
+            {
+              "flexDirection": "row",
+            },
+            null,
+          ]
+        }
+      >
+        <View
+          style={
+            {
+              "borderColor": "#74CB48",
+              "borderRadius": 23.855932837144906,
+              "borderWidth": 5.963983209286226,
+              "flexDirection": "column",
+              "height": "100%",
+              "width": 521.8485308125448,
+            }
+          }
+        >
+          <Text
+            style={
+              {
+                "color": "#74CB48",
+                "fontSize": 29.819916046431132,
+                "padding": 29.819916046431132,
+                "textAlign": "right",
+                "width": "100%",
+              }
+            }
+          >
+            #
+            0002
+          </Text>
+          <View
+            style={
+              {
+                "alignItems": "center",
+                "flex": 1,
+              }
+            }
+          />
+          <Text
+            style={
+              {
+                "backgroundColor": "#74CB48",
+                "color": "white",
+                "fontSize": 35.78389925571736,
+                "paddingVertical": 29.819916046431132,
+                "textAlign": "center",
+              }
+            }
+          >
+            Bulbasaur2
+          </Text>
+        </View>
+        <View
+          style={
+            {
+              "width": 29.819916046431132,
+            }
+          }
+        />
+      </View>
+      <View
+        onFocusCapture={[Function]}
+        onLayout={[Function]}
+        style={
+          [
+            {
+              "flexDirection": "row",
+            },
+            null,
+          ]
+        }
+      >
+        <View
+          style={
+            {
+              "borderColor": "#70559B",
+              "borderRadius": 23.855932837144906,
+              "borderWidth": 5.963983209286226,
+              "flexDirection": "column",
+              "height": "100%",
+              "width": 521.8485308125448,
+            }
+          }
+        >
+          <Text
+            style={
+              {
+                "color": "#70559B",
+                "fontSize": 29.819916046431132,
+                "padding": 29.819916046431132,
+                "textAlign": "right",
+                "width": "100%",
+              }
+            }
+          >
+            #
+            0003
+          </Text>
+          <View
+            style={
+              {
+                "alignItems": "center",
+                "flex": 1,
+              }
+            }
+          />
+          <Text
+            style={
+              {
+                "backgroundColor": "#70559B",
+                "color": "white",
+                "fontSize": 35.78389925571736,
+                "paddingVertical": 29.819916046431132,
+                "textAlign": "center",
+              }
+            }
+          >
+            Bulbasaur3
+          </Text>
+        </View>
+      </View>
+      <View
+        onLayout={[Function]}
+      >
+        <View
+          style={
+            {
+              "width": 29.819916046431132,
+            }
+          }
+        />
+      </View>
+    </View>
+  </RCTScrollView>
+</View>
+`;

@@ -21,7 +21,10 @@ const PokemonCard = ({ pokemon }: PokemonCardType) => {
 				#{pokemon.id.toString().padStart(4, "0")}
 			</Text>
 			<View style={styles.image}>
-				<SvgUri source={{ uri: pokemon.img }} />
+				<SvgUri
+					source={{ uri: pokemon.img }}
+					height={perfectSize(250)}
+				/>
 			</View>
 			<Text style={{ ...styles.nameText, backgroundColor: typeColor }}>
 				{titlecase(pokemon.name.toUpperCase())}
@@ -32,8 +35,8 @@ const PokemonCard = ({ pokemon }: PokemonCardType) => {
 
 const styles = StyleSheet.create({
 	container: {
-		width: "80%",
-		height: "40%",
+		width: perfectSize(350),
+		height: "100%",
 		borderRadius: perfectSize(16),
 		borderWidth: perfectSize(4),
 		flexDirection: "column",
