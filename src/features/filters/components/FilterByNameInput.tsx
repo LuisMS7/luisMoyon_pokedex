@@ -41,10 +41,12 @@ const styles = StyleSheet.create({
 	title: {
 		fontWeight: BOLD_WEIGHT,
 		fontSize: TEXT_SMALL_SIZE,
+		paddingTop: 4,
 	},
 	textInput: {
 		fontWeight: NORMAL_WEIGHT,
 		fontSize: TEXT_NORMAL_SIZE,
+		flex: 1,
 	},
 });
 

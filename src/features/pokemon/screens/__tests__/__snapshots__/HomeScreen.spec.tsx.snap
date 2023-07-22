@@ -76,6 +76,7 @@ exports[`HomeScreen should render correctly 1`] = `
               {
                 "fontSize": 17.89194962785868,
                 "fontWeight": "800",
+                "paddingTop": 4,
               }
             }
           >
@@ -88,6 +89,7 @@ exports[`HomeScreen should render correctly 1`] = `
             placeholder="Pokemon name"
             style={
               {
+                "flex": 1,
                 "fontSize": 20.873941232501792,
                 "fontWeight": "400",
               }
