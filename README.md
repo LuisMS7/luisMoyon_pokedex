@@ -172,3 +172,7 @@ Types folder contains all the feature-specific types or models to use.
 ### utils folder
 
 Utils folder contains all the feature-specific utils.
+
+## Project Overview
+
+https://github.com/LuisMS7/luisMoyon_pokedex/assets/31932535/f66db6cd-ee78-44d3-a9dc-f89cecf0a17c
