@@ -24,7 +24,7 @@ const HomeScreen = () => {
 	} = useApi(() => getPokemonByName(filters.pokemonName));
 	const updatePokemons = usePokemonStore((state) => state.updatePokemons);
 	const pokemons = usePokemonStore((state) => state.pokemons);
-	const setPokemons = usePokemonStore((state) => state.setPokemons);
+	const setPokemon = usePokemonStore((state) => state.setPokemon);
 	const clearPokemons = usePokemonStore((state) => state.clearPokemons);
 	const filters = useFiltersStore((state) => state.filters);
 	const { showSnackbar } = useSnackbar();
@@ -52,7 +52,7 @@ const HomeScreen = () => {
 	useEffect(() => {
 		if (filteredResponse) {
 			setOffset(0);
-			setPokemons(filteredResponse);
+			setPokemon(filteredResponse);
 		}
 	}, [filteredResponse]);
 

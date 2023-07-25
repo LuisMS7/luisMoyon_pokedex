@@ -6,7 +6,7 @@ import { PokemonApiResponse } from "@pokemon/types/pokemon-api-response.type";
 type State = {
 	pokemons: PokemonListItemApiResponse[];
 	updatePokemons: (pokemons: PokemonListItemApiResponse[]) => void;
-	setPokemons: (pokemon: PokemonApiResponse) => void;
+	setPokemon: (pokemon: PokemonApiResponse) => void;
 	clearPokemons: () => void;
 };
 
@@ -19,7 +19,7 @@ export const usePokemonStore = create<State>((set, get) => ({
 			pokemons: updatePokemonsList,
 		});
 	},
-	setPokemons: (pokemon: PokemonApiResponse) => {
+	setPokemon: (pokemon: PokemonApiResponse) => {
 		set({
 			pokemons: [
 				{
