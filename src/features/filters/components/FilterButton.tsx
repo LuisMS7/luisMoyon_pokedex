@@ -2,10 +2,10 @@ import React from "react";
 import { Pressable, StyleSheet, Text } from "react-native";
 import { perfectSize } from "@utils/perfect-size";
 import { TEXT_SUBTITLE_SIZE } from "@lib/constants";
-import { useFilters } from "@filters/store/filters-slice";
+import { useFiltersStore } from "@filters/store/filters-slice";
 
 const FilterButton = () => {
-	const filterPokemons = useFilters((state) => state.filterPokemons);
+	const filterPokemons = useFiltersStore((state) => state.filterPokemons);
 	return (
 		<Pressable style={styles.container} onPress={filterPokemons}>
 			<Text style={styles.text}>Filter</Text>

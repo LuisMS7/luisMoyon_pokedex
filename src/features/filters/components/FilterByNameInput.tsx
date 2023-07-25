@@ -6,11 +6,11 @@ import {
 	TEXT_NORMAL_SIZE,
 	TEXT_SMALL_SIZE,
 } from "@lib/constants";
-import { useFilters } from "@filters/store/filters-slice";
+import { useFiltersStore } from "@filters/store/filters-slice";
 
 const FilterByNameInput = () => {
-	const pokemonName = useFilters((state) => state.pokemonName);
-	const setPokemonName = useFilters((state) => state.setPokemonName);
+	const pokemonName = useFiltersStore((state) => state.pokemonName);
+	const setPokemonName = useFiltersStore((state) => state.setPokemonName);
 
 	const handleChangeText = (inputText: string) => {
 		setPokemonName(inputText);

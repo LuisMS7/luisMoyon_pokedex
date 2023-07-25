@@ -1,16 +1,17 @@
 import React from "react";
 import { act, fireEvent, render, screen } from "@testing-library/react-native";
 import FilterByNameInput from "@filters/components/FilterByNameInput";
-import { useFilters } from "@filters/store/filters-slice";
+import { useFiltersStore } from "@filters/store/filters-slice";
 
 jest.mock("@filters/store/filters-slice", () => ({
-	useFilters: jest.fn(),
+	useFiltersStore: jest.fn(),
 }));
 
 describe("FilterByNameInput", () => {
 	it("should render correctly", () => {
-		(useFilters as unknown as jest.Mock).mockImplementation((selector) =>
-			selector({ pokemonName: "", setPokemonName: jest.fn() }),
+		(useFiltersStore as unknown as jest.Mock).mockImplementation(
+			(selector) =>
+				selector({ pokemonName: "", setPokemonName: jest.fn() }),
 		);
 		render(<FilterByNameInput />);
 
@@ -19,8 +20,12 @@ describe("FilterByNameInput", () => {
 
 	it("should call setPokemonName when user edit text input", () => {
 		const mockSetPokemonName = jest.fn();
-		(useFilters as unknown as jest.Mock).mockImplementation((selector) =>
-			selector({ pokemonName: "", setPokemonName: mockSetPokemonName }),
+		(useFiltersStore as unknown as jest.Mock).mockImplementation(
+			(selector) =>
+				selector({
+					pokemonName: "",
+					setPokemonName: mockSetPokemonName,
+				}),
 		);
 		const { getByTestId } = render(<FilterByNameInput />);
 
@@ -34,11 +39,12 @@ describe("FilterByNameInput", () => {
 	});
 
 	it("should use pokemonName of store in text input", () => {
-		(useFilters as unknown as jest.Mock).mockImplementation((selector) =>
-			selector({
-				pokemonName: "mockPokemon",
-				setPokemonName: jest.fn(),
-			}),
+		(useFiltersStore as unknown as jest.Mock).mockImplementation(
+			(selector) =>
+				selector({
+					pokemonName: "mockPokemon",
+					setPokemonName: jest.fn(),
+				}),
 		);
 		const { getByTestId } = render(<FilterByNameInput />);
 

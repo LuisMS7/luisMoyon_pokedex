@@ -1,10 +1,10 @@
 import React from "react";
 import { act, fireEvent, render, screen } from "@testing-library/react-native";
 import FilterButton from "@filters/components/FilterButton";
-import { useFilters } from "@filters/store/filters-slice";
+import { useFiltersStore } from "@filters/store/filters-slice";
 
 jest.mock("@filters/store/filters-slice", () => ({
-	useFilters: jest.fn(),
+	useFiltersStore: jest.fn(),
 }));
 
 describe("FilterButton", () => {
@@ -16,8 +16,8 @@ describe("FilterButton", () => {
 
 	it("should call filterPokemons when button is pressed", () => {
 		const mockFilterPokemons = jest.fn();
-		(useFilters as unknown as jest.Mock).mockImplementation((selector) =>
-			selector({ filterPokemons: mockFilterPokemons }),
+		(useFiltersStore as unknown as jest.Mock).mockImplementation(
+			(selector) => selector({ filterPokemons: mockFilterPokemons }),
 		);
 		const { getByText } = render(<FilterButton />);
 

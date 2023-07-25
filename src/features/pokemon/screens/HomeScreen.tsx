@@ -6,7 +6,7 @@ import getAllPokemons from "@pokemon/store/actions/get-all-pokemons";
 import { usePokemonStore } from "@pokemon/store/pokemon-slice";
 import LoadingModal from "@src/components/LoadingModal";
 import FilterHeader from "@filters/components/FilterHeader";
-import { useFilters } from "@filters/store/filters-slice";
+import { useFiltersStore } from "@filters/store/filters-slice";
 import getPokemonByName from "@pokemon/store/actions/get-pokemon-by-name";
 import { useSafeAreaInsets } from "react-native-safe-area-context";
 import { useSnackbar } from "@hooks/useSnackbar";
@@ -26,7 +26,7 @@ const HomeScreen = () => {
 	const pokemons = usePokemonStore((state) => state.pokemons);
 	const setPokemons = usePokemonStore((state) => state.setPokemons);
 	const clearPokemons = usePokemonStore((state) => state.clearPokemons);
-	const filters = useFilters((state) => state.filters);
+	const filters = useFiltersStore((state) => state.filters);
 	const { showSnackbar } = useSnackbar();
 	const { top } = useSafeAreaInsets();
 	useEffect(() => {

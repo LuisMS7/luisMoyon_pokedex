@@ -6,9 +6,10 @@ type State = {
 	setPokemonName: (pokemonName: string) => void;
 	filters: Filters;
 	filterPokemons: () => void;
+	clear: () => void;
 };
 
-export const useFilters = create<State>((set, get) => ({
+export const useFiltersStore = create<State>((set, get) => ({
 	pokemonName: "",
 	setPokemonName: (pokemonName: string) => {
 		set({
@@ -19,6 +20,12 @@ export const useFilters = create<State>((set, get) => ({
 	filterPokemons: () => {
 		set({
 			filters: { pokemonName: get().pokemonName },
+		});
+	},
+	clear: () => {
+		set({
+			pokemonName: "",
+			filters: { pokemonName: "" },
 		});
 	},
 }));
