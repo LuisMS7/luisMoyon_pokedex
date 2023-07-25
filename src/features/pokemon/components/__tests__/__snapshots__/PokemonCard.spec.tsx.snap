@@ -35,7 +35,7 @@ exports[`PokemonCard should render correctly 1`] = `
       "borderRadius": 23.855932837144906,
       "borderWidth": 5.963983209286226,
       "flexDirection": "column",
-      "height": "100%",
+      "height": 641.1281949982694,
       "opacity": 1,
       "width": 521.8485308125448,
     }

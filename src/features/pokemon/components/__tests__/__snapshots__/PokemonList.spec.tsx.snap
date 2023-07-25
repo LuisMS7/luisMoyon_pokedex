@@ -1,371 +1,352 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`PokemonCard should render correctly 1`] = `
-<View
-  style={
+<RCTScrollView
+  ItemSeparatorComponent={[Function]}
+  ListFooterComponent={[Function]}
+  ListHeaderComponent={[Function]}
+  contentContainerStyle={
     {
       "alignSelf": "center",
-      "flex": 1,
-      "justifyContent": "center",
     }
   }
->
-  <View
-    style={
+  data={
+    [
       {
-        "height": "70%",
-      }
-    }
-  >
-    <RCTScrollView
-      ItemSeparatorComponent={[Function]}
-      ListFooterComponent={[Function]}
-      ListHeaderComponent={[Function]}
-      data={
+        "name": "mockPokemon1",
+        "url": "",
+      },
+      {
+        "name": "mockPokemon2",
+        "url": "",
+      },
+      {
+        "name": "mockPokemon3",
+        "url": "",
+      },
+    ]
+  }
+  getItem={[Function]}
+  getItemCount={[Function]}
+  horizontal={true}
+  keyExtractor={[Function]}
+  onContentSizeChange={[Function]}
+  onLayout={[Function]}
+  onMomentumScrollBegin={[Function]}
+  onMomentumScrollEnd={[Function]}
+  onScroll={[Function]}
+  onScrollBeginDrag={[Function]}
+  onScrollEndDrag={[Function]}
+  removeClippedSubviews={false}
+  renderItem={[Function]}
+  scrollEventThrottle={50}
+  stickyHeaderIndices={[]}
+  viewabilityConfigCallbackPairs={[]}
+>
+  <View>
+    <View
+      onLayout={[Function]}
+    >
+      <View
+        style={
+          {
+            "width": 29.819916046431132,
+          }
+        }
+      />
+    </View>
+    <View
+      onFocusCapture={[Function]}
+      onLayout={[Function]}
+      style={
         [
           {
-            "name": "mockPokemon1",
-            "url": "",
+            "flexDirection": "row",
           },
-          {
-            "name": "mockPokemon2",
-            "url": "",
-          },
-          {
-            "name": "mockPokemon3",
-            "url": "",
-          },
+          null,
         ]
       }
-      getItem={[Function]}
-      getItemCount={[Function]}
-      horizontal={true}
-      keyExtractor={[Function]}
-      onContentSizeChange={[Function]}
-      onLayout={[Function]}
-      onMomentumScrollBegin={[Function]}
-      onMomentumScrollEnd={[Function]}
-      onScroll={[Function]}
-      onScrollBeginDrag={[Function]}
-      onScrollEndDrag={[Function]}
-      removeClippedSubviews={false}
-      renderItem={[Function]}
-      scrollEventThrottle={50}
-      stickyHeaderIndices={[]}
-      style={
-        {
-          "flex": 1,
-          "height": "70%",
-        }
-      }
-      viewabilityConfigCallbackPairs={[]}
     >
-      <View>
-        <View
-          onLayout={[Function]}
-        >
-          <View
-            style={
-              {
-                "width": 29.819916046431132,
-              }
-            }
-          />
-        </View>
-        <View
-          onFocusCapture={[Function]}
-          onLayout={[Function]}
+      <View
+        accessibilityState={
+          {
+            "busy": undefined,
+            "checked": undefined,
+            "disabled": undefined,
+            "expanded": undefined,
+            "selected": undefined,
+          }
+        }
+        accessibilityValue={
+          {
+            "max": undefined,
+            "min": undefined,
+            "now": undefined,
+            "text": undefined,
+          }
+        }
+        accessible={true}
+        collapsable={false}
+        focusable={true}
+        onClick={[Function]}
+        onResponderGrant={[Function]}
+        onResponderMove={[Function]}
+        onResponderRelease={[Function]}
+        onResponderTerminate={[Function]}
+        onResponderTerminationRequest={[Function]}
+        onStartShouldSetResponder={[Function]}
+        style={
+          {
+            "borderColor": "#74CB48",
+            "borderRadius": 23.855932837144906,
+            "borderWidth": 5.963983209286226,
+            "flexDirection": "column",
+            "height": 641.1281949982694,
+            "opacity": 1,
+            "width": 521.8485308125448,
+          }
+        }
+      >
+        <Text
           style={
-            [
-              {
-                "flexDirection": "row",
-              },
-              null,
-            ]
+            {
+              "color": "#74CB48",
+              "fontSize": 29.819916046431132,
+              "padding": 29.819916046431132,
+              "textAlign": "right",
+              "width": "100%",
+            }
           }
         >
-          <View
-            accessibilityState={
-              {
-                "busy": undefined,
-                "checked": undefined,
-                "disabled": undefined,
-                "expanded": undefined,
-                "selected": undefined,
-              }
-            }
-            accessibilityValue={
-              {
-                "max": undefined,
-                "min": undefined,
-                "now": undefined,
-                "text": undefined,
-              }
-            }
-            accessible={true}
-            collapsable={false}
-            focusable={true}
-            onClick={[Function]}
-            onResponderGrant={[Function]}
-            onResponderMove={[Function]}
-            onResponderRelease={[Function]}
-            onResponderTerminate={[Function]}
-            onResponderTerminationRequest={[Function]}
-            onStartShouldSetResponder={[Function]}
-            style={
-              {
-                "borderColor": "#74CB48",
-                "borderRadius": 23.855932837144906,
-                "borderWidth": 5.963983209286226,
-                "flexDirection": "column",
-                "height": "100%",
-                "opacity": 1,
-                "width": 521.8485308125448,
-              }
-            }
-          >
-            <Text
-              style={
-                {
-                  "color": "#74CB48",
-                  "fontSize": 29.819916046431132,
-                  "padding": 29.819916046431132,
-                  "textAlign": "right",
-                  "width": "100%",
-                }
-              }
-            >
-              #
-              0001
-            </Text>
-            <View
-              style={
-                {
-                  "alignItems": "center",
-                  "flex": 1,
-                }
-              }
-            />
-            <Text
-              style={
-                {
-                  "backgroundColor": "#74CB48",
-                  "color": "white",
-                  "fontSize": 35.78389925571736,
-                  "paddingVertical": 29.819916046431132,
-                  "textAlign": "center",
-                }
-              }
-            >
-              Mockpokemon1
-            </Text>
-          </View>
-          <View
-            style={
-              {
-                "width": 29.819916046431132,
-              }
-            }
-          />
-        </View>
+          #
+          0001
+        </Text>
         <View
-          onFocusCapture={[Function]}
-          onLayout={[Function]}
           style={
-            [
-              {
-                "flexDirection": "row",
-              },
-              null,
-            ]
+            {
+              "alignItems": "center",
+              "flex": 1,
+            }
+          }
+        />
+        <Text
+          style={
+            {
+              "backgroundColor": "#74CB48",
+              "color": "white",
+              "fontSize": 35.78389925571736,
+              "paddingVertical": 29.819916046431132,
+              "textAlign": "center",
+            }
           }
         >
-          <View
-            accessibilityState={
-              {
-                "busy": undefined,
-                "checked": undefined,
-                "disabled": undefined,
-                "expanded": undefined,
-                "selected": undefined,
-              }
-            }
-            accessibilityValue={
-              {
-                "max": undefined,
-                "min": undefined,
-                "now": undefined,
-                "text": undefined,
-              }
-            }
-            accessible={true}
-            collapsable={false}
-            focusable={true}
-            onClick={[Function]}
-            onResponderGrant={[Function]}
-            onResponderMove={[Function]}
-            onResponderRelease={[Function]}
-            onResponderTerminate={[Function]}
-            onResponderTerminationRequest={[Function]}
-            onStartShouldSetResponder={[Function]}
-            style={
-              {
-                "borderColor": "#6493EB",
-                "borderRadius": 23.855932837144906,
-                "borderWidth": 5.963983209286226,
-                "flexDirection": "column",
-                "height": "100%",
-                "opacity": 1,
-                "width": 521.8485308125448,
-              }
-            }
-          >
-            <Text
-              style={
-                {
-                  "color": "#6493EB",
-                  "fontSize": 29.819916046431132,
-                  "padding": 29.819916046431132,
-                  "textAlign": "right",
-                  "width": "100%",
-                }
-              }
-            >
-              #
-              0002
-            </Text>
-            <View
-              style={
-                {
-                  "alignItems": "center",
-                  "flex": 1,
-                }
-              }
-            />
-            <Text
-              style={
-                {
-                  "backgroundColor": "#6493EB",
-                  "color": "white",
-                  "fontSize": 35.78389925571736,
-                  "paddingVertical": 29.819916046431132,
-                  "textAlign": "center",
-                }
-              }
-            >
-              Mockpokemon2
-            </Text>
-          </View>
-          <View
-            style={
-              {
-                "width": 29.819916046431132,
-              }
-            }
-          />
-        </View>
-        <View
-          onFocusCapture={[Function]}
-          onLayout={[Function]}
-          style={
-            [
-              {
-                "flexDirection": "row",
-              },
-              null,
-            ]
-          }
-        >
-          <View
-            accessibilityState={
-              {
-                "busy": undefined,
-                "checked": undefined,
-                "disabled": undefined,
-                "expanded": undefined,
-                "selected": undefined,
-              }
-            }
-            accessibilityValue={
-              {
-                "max": undefined,
-                "min": undefined,
-                "now": undefined,
-                "text": undefined,
-              }
-            }
-            accessible={true}
-            collapsable={false}
-            focusable={true}
-            onClick={[Function]}
-            onResponderGrant={[Function]}
-            onResponderMove={[Function]}
-            onResponderRelease={[Function]}
-            onResponderTerminate={[Function]}
-            onResponderTerminationRequest={[Function]}
-            onStartShouldSetResponder={[Function]}
-            style={
-              {
-                "borderColor": "#F57D31",
-                "borderRadius": 23.855932837144906,
-                "borderWidth": 5.963983209286226,
-                "flexDirection": "column",
-                "height": "100%",
-                "opacity": 1,
-                "width": 521.8485308125448,
-              }
-            }
-          >
-            <Text
-              style={
-                {
-                  "color": "#F57D31",
-                  "fontSize": 29.819916046431132,
-                  "padding": 29.819916046431132,
-                  "textAlign": "right",
-                  "width": "100%",
-                }
-              }
-            >
-              #
-              0003
-            </Text>
-            <View
-              style={
-                {
-                  "alignItems": "center",
-                  "flex": 1,
-                }
-              }
-            />
-            <Text
-              style={
-                {
-                  "backgroundColor": "#F57D31",
-                  "color": "white",
-                  "fontSize": 35.78389925571736,
-                  "paddingVertical": 29.819916046431132,
-                  "textAlign": "center",
-                }
-              }
-            >
-              Mockpokemon3
-            </Text>
-          </View>
-        </View>
-        <View
-          onLayout={[Function]}
-        >
-          <View
-            style={
-              {
-                "width": 29.819916046431132,
-              }
-            }
-          />
-        </View>
+          Mockpokemon1
+        </Text>
       </View>
-    </RCTScrollView>
+      <View
+        style={
+          {
+            "width": 29.819916046431132,
+          }
+        }
+      />
+    </View>
+    <View
+      onFocusCapture={[Function]}
+      onLayout={[Function]}
+      style={
+        [
+          {
+            "flexDirection": "row",
+          },
+          null,
+        ]
+      }
+    >
+      <View
+        accessibilityState={
+          {
+            "busy": undefined,
+            "checked": undefined,
+            "disabled": undefined,
+            "expanded": undefined,
+            "selected": undefined,
+          }
+        }
+        accessibilityValue={
+          {
+            "max": undefined,
+            "min": undefined,
+            "now": undefined,
+            "text": undefined,
+          }
+        }
+        accessible={true}
+        collapsable={false}
+        focusable={true}
+        onClick={[Function]}
+        onResponderGrant={[Function]}
+        onResponderMove={[Function]}
+        onResponderRelease={[Function]}
+        onResponderTerminate={[Function]}
+        onResponderTerminationRequest={[Function]}
+        onStartShouldSetResponder={[Function]}
+        style={
+          {
+            "borderColor": "#6493EB",
+            "borderRadius": 23.855932837144906,
+            "borderWidth": 5.963983209286226,
+            "flexDirection": "column",
+            "height": 641.1281949982694,
+            "opacity": 1,
+            "width": 521.8485308125448,
+          }
+        }
+      >
+        <Text
+          style={
+            {
+              "color": "#6493EB",
+              "fontSize": 29.819916046431132,
+              "padding": 29.819916046431132,
+              "textAlign": "right",
+              "width": "100%",
+            }
+          }
+        >
+          #
+          0002
+        </Text>
+        <View
+          style={
+            {
+              "alignItems": "center",
+              "flex": 1,
+            }
+          }
+        />
+        <Text
+          style={
+            {
+              "backgroundColor": "#6493EB",
+              "color": "white",
+              "fontSize": 35.78389925571736,
+              "paddingVertical": 29.819916046431132,
+              "textAlign": "center",
+            }
+          }
+        >
+          Mockpokemon2
+        </Text>
+      </View>
+      <View
+        style={
+          {
+            "width": 29.819916046431132,
+          }
+        }
+      />
+    </View>
+    <View
+      onFocusCapture={[Function]}
+      onLayout={[Function]}
+      style={
+        [
+          {
+            "flexDirection": "row",
+          },
+          null,
+        ]
+      }
+    >
+      <View
+        accessibilityState={
+          {
+            "busy": undefined,
+            "checked": undefined,
+            "disabled": undefined,
+            "expanded": undefined,
+            "selected": undefined,
+          }
+        }
+        accessibilityValue={
+          {
+            "max": undefined,
+            "min": undefined,
+            "now": undefined,
+            "text": undefined,
+          }
+        }
+        accessible={true}
+        collapsable={false}
+        focusable={true}
+        onClick={[Function]}
+        onResponderGrant={[Function]}
+        onResponderMove={[Function]}
+        onResponderRelease={[Function]}
+        onResponderTerminate={[Function]}
+        onResponderTerminationRequest={[Function]}
+        onStartShouldSetResponder={[Function]}
+        style={
+          {
+            "borderColor": "#F57D31",
+            "borderRadius": 23.855932837144906,
+            "borderWidth": 5.963983209286226,
+            "flexDirection": "column",
+            "height": 641.1281949982694,
+            "opacity": 1,
+            "width": 521.8485308125448,
+          }
+        }
+      >
+        <Text
+          style={
+            {
+              "color": "#F57D31",
+              "fontSize": 29.819916046431132,
+              "padding": 29.819916046431132,
+              "textAlign": "right",
+              "width": "100%",
+            }
+          }
+        >
+          #
+          0003
+        </Text>
+        <View
+          style={
+            {
+              "alignItems": "center",
+              "flex": 1,
+            }
+          }
+        />
+        <Text
+          style={
+            {
+              "backgroundColor": "#F57D31",
+              "color": "white",
+              "fontSize": 35.78389925571736,
+              "paddingVertical": 29.819916046431132,
+              "textAlign": "center",
+            }
+          }
+        >
+          Mockpokemon3
+        </Text>
+      </View>
+    </View>
+    <View
+      onLayout={[Function]}
+    >
+      <View
+        style={
+          {
+            "width": 29.819916046431132,
+          }
+        }
+      />
+    </View>
   </View>
-</View>
+</RCTScrollView>
 `;

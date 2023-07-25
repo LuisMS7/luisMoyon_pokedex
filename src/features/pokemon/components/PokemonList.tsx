@@ -63,20 +63,16 @@ const PokemonList = ({ pokemonsItems, loadMorePokemons }: PokemonListProps) => {
 	};
 
 	return (
-		<View style={styles.container}>
-			<View style={styles.listContainer}>
-				<FlatList
-					data={pokemonsItems}
-					renderItem={renderPokemonCard}
-					horizontal
-					ListHeaderComponent={ItemSeparator}
-					ItemSeparatorComponent={ItemSeparator}
-					ListFooterComponent={ItemSeparator}
-					onScroll={handleScroll}
-					style={styles.list}
-				/>
-			</View>
-		</View>
+		<FlatList
+			data={pokemonsItems}
+			renderItem={renderPokemonCard}
+			horizontal
+			ListHeaderComponent={ItemSeparator}
+			ItemSeparatorComponent={ItemSeparator}
+			ListFooterComponent={ItemSeparator}
+			onScroll={handleScroll}
+			contentContainerStyle={styles.container}
+		/>
 	);
 };
 
@@ -85,12 +81,8 @@ const styles = StyleSheet.create({
 		width: perfectSize(20),
 	},
 	container: {
-		flex: 1,
 		alignSelf: "center",
-		justifyContent: "center",
 	},
-	listContainer: { height: "70%" },
-	list: { height: "70%", flex: 1 },
 });
 
 export default PokemonList;

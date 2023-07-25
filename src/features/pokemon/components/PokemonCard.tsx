@@ -66,6 +66,7 @@ const PokemonCard = ({ pokemonItem }: PokemonCardType) => {
 				<Image
 					source={{ uri: pokemon.img }}
 					style={{ height: perfectSize(250), width: "80%" }}
+					resizeMode="contain"
 				/>
 			);
 		} else if (pokemon?.img && pokemon?.img.endsWith("svg")) {
@@ -98,7 +99,7 @@ const PokemonCard = ({ pokemonItem }: PokemonCardType) => {
 const styles = StyleSheet.create({
 	container: {
 		width: perfectSize(350),
-		height: "100%",
+		height: perfectSize(430),
 		borderRadius: perfectSize(16),
 		borderWidth: perfectSize(4),
 		flexDirection: "column",
